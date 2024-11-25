@@ -1,4 +1,5 @@
 # 3dGameProject
+<pre>
 Danny Aguilar
 Brandon Reynolds
 Vince Huynh 
@@ -34,3 +35,4 @@ Fun additions
     Temporary blocks
     Character Selection
     Powerups
+<pre>
