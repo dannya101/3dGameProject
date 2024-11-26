@@ -38,6 +38,7 @@ Fun additions
 
 General Goal of each member
     Danny Aguilar
+        Gameplay Environment
     Brandon Reynolds
         UI and Camera
     Vincent Huynh 
