@@ -44,6 +44,7 @@ General Goal of each member
     Vincent Huynh 
         Point system (Time and Coin Based)
     Steven Trujillo 
+        Design and Audio
     Park Fabian
         Character Movement
     Jeffrey DeOcampo
