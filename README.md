@@ -49,4 +49,7 @@ General Goal of each member
         Character Movement
     Jeffrey DeOcampo
         Audio and Movement
+
+Link to Gameplay for halfway point:
+    https://drive.google.com/file/d/1uIzoKeKiyzcYLZ1YWrjpA2dURXBPScIs/view?usp=sharing
 <pre>
