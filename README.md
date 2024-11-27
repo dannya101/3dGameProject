@@ -7,7 +7,7 @@ Steven Trujillo
 Park Fabian
 Jeffrey DeOcampo
 
-Basic Fall guys
+Fall Guys Game
     Description of Game:
 Goal of the game is to intimitate one of the levels of Fall Guys. Where we will have the level of Falls Guys, where we have some sort of propellar that has         multiple fans. 
 The goal as a player of the game is to dodge the blades and stay on the platform as long they can while these blades rotate clockwise and counterclockwise simeultaneously. 
