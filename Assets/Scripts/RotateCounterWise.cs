@@ -16,7 +16,17 @@ public class RotatingCounterWise: MonoBehaviour
     }
     void FixedUpdate()
     {
-        targetRotation = Quaternion.Euler(objectToRotate.transform.eulerAngles.x, objectToRotate.transform.eulerAngles.y - speed, objectToRotate.transform.eulerAngles.z);
-        objectToRotate.transform.rotation = targetRotation;
+        if(Time.deltaTime % 5 == 0)
+        {
+            speed = -1;
+            targetRotation = Quaternion.Euler(objectToRotate.transform.eulerAngles.x, objectToRotate.transform.eulerAngles.y - speed, objectToRotate.transform.eulerAngles.z);
+            objectToRotate.transform.rotation = targetRotation;
+        }
+        else
+        {
+            speed = 1;
+            targetRotation = Quaternion.Euler(objectToRotate.transform.eulerAngles.x, objectToRotate.transform.eulerAngles.y - speed, objectToRotate.transform.eulerAngles.z);
+            objectToRotate.transform.rotation = targetRotation;
+        }
     }
 }
