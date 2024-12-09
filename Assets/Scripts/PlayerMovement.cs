@@ -31,10 +31,18 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+    [Header("Audio")]
+    public AudioSource walkAudio;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+
+         if (walkAudio == null)
+        {
+            walkAudio = GetComponent<AudioSource>();
+        }
     }
 
     private void Update()
@@ -46,10 +54,28 @@ public class PlayerMovement : MonoBehaviour
         SpeedControl();
 
         //To handle the ground drag
-        if(grounded)
+        if(grounded){
             rb.drag = groundDrag;
+
+            if (horizontalInput != 0 || verticalInput != 0)
+            {
+                if (!walkAudio.isPlaying)
+                {
+                    walkAudio.Play(); // Start playing the walking sound
+                }
+            }
+        
+            else
+            {
+                walkAudio.Stop(); // Stop walking sound when player stops
+            }
+    }
         else
+        {
             rb.drag = 0;
+
+             walkAudio.Stop();
+    }
     }
 
     private void FixedUpdate()
@@ -107,6 +133,4 @@ public class PlayerMovement : MonoBehaviour
     {
         readyToJump = true;
     }
-
-
 }
