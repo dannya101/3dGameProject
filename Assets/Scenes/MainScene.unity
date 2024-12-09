@@ -490,6 +490,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   orientation: {fileID: 226468814}
+  walkAudio: {fileID: 0}
 --- !u!1 &226468813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,8 +1223,8 @@ Transform:
   m_GameObject: {fileID: 907599290}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.27797323, z: -0.0003526095}
-  m_LocalScale: {x: 0.24554832, y: 2.4669592, z: 0.2130224}
+  m_LocalPosition: {x: 0, y: 0.27797323, z: 0.0125}
+  m_LocalScale: {x: 0.24554832, y: 2.6728792, z: 0.2130224}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1455191051}
