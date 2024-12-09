@@ -3,14 +3,14 @@
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
 /[Ll]ibrary/
-OurFallGuys/[Tt]emp/
-OurFallGuys/[Oo]bj/
-OurFallGuys/[Bb]uild/
-OurFallGuys/[Bb]uilds/
-OurFallGuys/[Ll]ogs/
-OurFallGuys/[Uu]ser[Ss]ettings/
-OurFallGuys/[Pp]rojectSettings/
-OurFallGuys/Assets/AssetStoreTools*
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Pp]rojectSettings/
+/Assets/AssetStoreTools*
 
 
 # MemoryCaptures can get excessive in size.
