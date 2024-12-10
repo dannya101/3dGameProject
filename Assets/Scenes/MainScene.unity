@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 7d3f29a57ee6be24685a9dfe6e873444, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -274,11 +274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55752030}
   serializedVersion: 2
-<<<<<<< HEAD
-  m_LocalRotation: {x: -0.01814157, y: -0.000000031758216, z: 0.000000023655996, w: 0.9998355}
-=======
   m_LocalRotation: {x: -0.018141616, y: -0.000000038276625, z: 0.000000028511415, w: 0.99983543}
->>>>>>> 62fadb68ab237ae5adcd96e3edc3c7b8e6238c79
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2140,11 +2136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372762500}
   serializedVersion: 2
-<<<<<<< HEAD
-  m_LocalRotation: {x: 0.09252101, y: 0, z: 0, w: 0.99571073}
-=======
-  m_LocalRotation: {x: -0.58466315, y: 0, z: 0, w: 0.81127614}
->>>>>>> 62fadb68ab237ae5adcd96e3edc3c7b8e6238c79
+  m_LocalRotation: {x: -0.58464706, y: 0, z: 0, w: 0.8112878}
   m_LocalPosition: {x: 0, y: 0, z: 0.0000009536743}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2238,20 +2230,14 @@ Transform:
   - {fileID: 1735157394}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!136 &1455191052
 CapsuleCollider:
-=======
---- !u!1 &1522041617
-GameObject:
->>>>>>> 62fadb68ab237ae5adcd96e3edc3c7b8e6238c79
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1455191047}
-  m_Material: {fileID: 13400000, guid: 56564b2a4534a274e9ab07efd64e6fe3, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2263,18 +2249,23 @@ GameObject:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 1.9999999
+  m_Radius: 0.5
+  m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
-=======
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1522041617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1522041620}
   - component: {fileID: 1522041619}
   - component: {fileID: 1522041618}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: 
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2330,7 +2321,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> 62fadb68ab237ae5adcd96e3edc3c7b8e6238c79
 --- !u!1 &1577766581
 GameObject:
   m_ObjectHideFlags: 3
@@ -3416,11 +3406,7 @@ SceneRoots:
   - {fileID: 1455191051}
   - {fileID: 484839864}
   - {fileID: 956822733}
-<<<<<<< HEAD
-=======
-  - {fileID: 2080610081}
   - {fileID: 1522041620}
   - {fileID: 124111944}
   - {fileID: 1937651743}
   - {fileID: 1253639635}
->>>>>>> 62fadb68ab237ae5adcd96e3edc3c7b8e6238c79
