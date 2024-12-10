@@ -4,7 +4,7 @@ public class CoinManager : MonoBehaviour
 {
     public GameObject coinPrefab;  // Reference to the coin prefab
     public int maxCoins = 5;       // Number of coins to maintain
-    public Vector3 spawnArea = new Vector3(9, 0, 8);  // Define the area for spawning coins
+    public Vector3 spawnArea = new Vector3(8, 0, 8);  // Define the area for spawning coins
 
     private void Start()
     {
@@ -31,8 +31,9 @@ public class CoinManager : MonoBehaviour
             1f,
             Random.Range(-spawnArea.z, spawnArea.z)
         );
+        //Quaternion coinRotation = Quaternion.Euler(90, 0, 0);
 
         // Instantiate the coin prefab at the random position
-        Instantiate(coinPrefab, randomPosition, Quaternion.identity);
+        Instantiate(coinPrefab, randomPosition, coinPrefab.transform.rotation);
     }
 }
