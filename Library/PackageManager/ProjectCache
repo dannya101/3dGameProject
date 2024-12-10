@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638693147074497437
-    m_Hash: 1863983806
+      ticks: 638693232019784637
+    m_Hash: 3904374222
   m_LockFileStatus:
     m_FilePath: C:/Users/User/Documents/Github/3dGameProject/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638693147074502399
-    m_Hash: 1107403555
+      ticks: 638693232020160849
+    m_Hash: 1409625771
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
