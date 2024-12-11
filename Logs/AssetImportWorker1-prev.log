@@ -1,0 +1,209 @@
+Unity Editor version:    2022.3.46f1 (8e9b8558c41a)
+Branch:                  2022.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 15.0.1 (Build 24A348)
+Darwin version:          24.0.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2022.3.46f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+/Users/brandonreynolds/Our Fall Guys (Brandon)
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+60856
+Successfully changed project path to: /Users/brandonreynolds/Our Fall Guys (Brandon)
+/Users/brandonreynolds/Our Fall Guys (Brandon)
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [8176136768]  Target information:
+
+Player connection [8176136768]  * "[IP] 10.130.142.137 [Port] 0 [Flags] 2 [Guid] 3526906409 [EditorId] 3526906409 [Version] 1048832 [Id] OSXEditor(0,Brandons-Laptop.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8176136768]  * "[IP] 192.168.64.1 [Port] 0 [Flags] 2 [Guid] 3526906409 [EditorId] 3526906409 [Version] 1048832 [Id] OSXEditor(0,Brandons-Laptop.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8176136768] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8176136768] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+The file 'ProjectSettings/TagManager.asset' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+The file 'ProjectSettings/DynamicsManager.asset' seems to have merge conflicts. Please open it in a text editor and fix the merge.
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.46f1 (8e9b8558c41a)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.3.46f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/brandonreynolds/Our Fall Guys (Brandon)/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+ preferred device: Apple M1 Pro (high power)
+Metal devices available: 1
+0: Apple M1 Pro (high power)
+Using device Apple M1 Pro (high power)
+Initializing Metal device caps: Apple M1 Pro
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2022.3.46f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2022.3.46f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2022.3.46f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56428
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.46f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.46f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.002100 seconds.
+- Loaded All Assemblies, in  0.240 seconds
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+We weren't able to parse search user settings at /Users/brandonreynolds/Our Fall Guys (Brandon)/UserSettings/Search.settings. We will fallback to default settings.
+UnityEngine.UnityException: SJSON Parse Error (/Users/brandonreynolds/Our Fall Guys (Brandon)/UserSettings/Search.settings) at line 0: Error consuming: =
+
+trackSelection = true
+
+  at UnityEditor.SJSON.Load (System.String path) [0x00029] in /Users/bokken/build/output/unity/unity/Editor/Mono/SJSON.bindings.cs:35 
+  at UnityEditor.Search.SearchSettingsStorage.Load () [0x00004] in /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:222 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.Search.SearchSettingsStorage:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:226)
+UnityEditor.Search.SearchSettings:Load () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:753)
+UnityEditor.Search.SearchSettings:set_settingsStorage (UnityEditor.Search.SearchSettingsStorage) (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:585)
+UnityEditor.Search.SearchSettings:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs:737)
+UnityEditor.Search.CustomIndexers:RefreshCustomIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:142)
+UnityEditor.Search.CustomIndexers:LoadCustomObjectIndexers () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:181)
+UnityEditor.Search.CustomIndexers:.cctor () (at /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/Indexing/CustomIndexers.cs:106)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:119)
+
+(Filename: /Users/bokken/build/output/unity/unity/Modules/QuickSearch/Editor/SearchSettings.cs Line: 226)
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.161 seconds
+Domain Reload Profiling: 400ms
+	BeginReloadAssembly (77ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (100ms)
+		LoadAssemblies (78ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (98ms)
+			TypeCache.Refresh (96ms)
+				TypeCache.ScanAssembly (87ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (161ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (128ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (91ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Assertion failed on expression: 'IsFileCreated(assemblyPath)'
+Compilation Pipeline: Could not read file Packages/com.unity.purchasing/Runtime/WinRT/UnityEngine.Purchasing.WinRT.asmdef
+Fatal Error! Compilation Pipeline: Could not read file Packages/com.unity.purchasing/Runtime/WinRT/UnityEngine.Purchasing.WinRT.asmdef
+Obtained 35 stack frames.
+#0  0x00000182de6600 in __pthread_kill
+#1  0x00000182d2b908 in abort
+#2  0x000001074a4444 in __cxx_global_var_init.3
+#3  0x000001060b1b24 in EditorMonoConsole::LogToConsoleImplementation(CppLogEntry&)
+#4  0x000001060b1774 in EditorMonoConsole::LogToConsoleImplementation(DebugStringToFileData const&)
+#5  0x000001060b2fb8 in LogToConsoleImplementation(DebugStringToFileData const&)
+#6  0x00000106e2a310 in DebugStringToFilePostprocessedStacktrace(DebugStringToFileData const&)
+#7  0x00000106e2abe4 in DebugStringToFile(DebugStringToFileData const&)
+#8  0x000001065c3e70 in RegisterAssemblyDefinition(core::basic_string<char, core::StringStorageDefault<char>> const&)
+#9  0x000001069b722c in UpdateScriptCompilationPipelineCaches(ScriptChanges const&, bool)
+#10 0x000001069b7a94 in WorkerInitializeAndProcessScriptChanges()
+#11 0x0000010624688c in Application::InitializeProject()
+#12 0x000001074b05cc in -[EditorApplication applicationDidFinishLaunching:]
+#13 0x00000182efaf80 in __CFNOTIFICATIONCENTER_IS_CALLING_OUT_TO_AN_OBSERVER__
+#14 0x00000182f8c274 in ___CFXRegistrationPost_block_invoke
+#15 0x00000182f8c1bc in _CFXRegistrationPost
+#16 0x00000182ec9634 in _CFXNotificationPost
+#17 0x00000184071c34 in -[NSNotificationCenter postNotificationName:object:userInfo:]
+#18 0x00000186a5167c in -[NSApplication _postDidFinishNotification]
+#19 0x00000186a5142c in -[NSApplication _sendFinishLaunchingNotification]
+#20 0x00000186a4f88c in -[NSApplication(NSAppleEventHandling) _handleAEOpenEvent:]
+#21 0x00000186a4f494 in -[NSApplication(NSAppleEventHandling) _handleCoreEvent:withReplyEvent:]
+#22 0x0000018409a8ac in -[NSAppleEventManager dispatchRawAppleEvent:withRawReply:handlerRefCon:]
+#23 0x0000018409a6a4 in _NSAppleEventManagerGenericHandler
+#24 0x0000018a3bf2e4 in _AppleEventsCheckInAppWithBlock
+#25 0x0000018a3bec08 in _AppleEventsCheckInAppWithBlock
+#26 0x0000018a3b8154 in aeProcessAppleEvent
+#27 0x0000018e25adb4 in AEProcessAppleEvent
+#28 0x00000186a48d68 in _DPSNextEvent
+#29 0x0000018736e7b8 in -[NSApplication(NSEventRouting) _nextEventMatchingEventMask:untilDate:inMode:dequeue:]
+#30 0x00000186a3bb7c in -[NSApplication run]
+#31 0x00000186a1244c in NSApplicationMain
+#32 0x000001074ca614 in EditorMain(int, char const**)
+#33 0x000001074ca978 in main
+#34 0x00000182a9c274 in start
