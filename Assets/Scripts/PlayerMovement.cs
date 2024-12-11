@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
 
     [Header("Audio")]
-    public AudioSource walkAudio;
+    private AudioSource walkAudio;
 
     private void Start()
     {
