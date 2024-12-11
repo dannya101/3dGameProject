@@ -6,9 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
-
     public float groundDrag;
-
     public float jumpForce;
     public float jumpCooldown;
     public float airMultiplier;
@@ -44,12 +42,16 @@ public class PlayerMovement : MonoBehaviour
         {
             walkAudio = GetComponent<AudioSource>();
         }
+
+        // Initialize readyToJump as true at the start
+        readyToJump = true;
     }
 
     private void Update()
     {
-        // Check if the player is on the ground
+        // Check if the player is on the ground using a raycast
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+        Debug.Log("Grounded: " + grounded);  // Debugging ground status
 
         MyInput();
         SpeedControl();
@@ -94,11 +96,10 @@ public class PlayerMovement : MonoBehaviour
         // Jump logic
         if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
+            Debug.Log("Jump key pressed");  // Debugging jump key input
             readyToJump = false;
-
             Jump();
-
-            Invoke(nameof(ResetJump), jumpCooldown);
+            Invoke(nameof(ResetJump), jumpCooldown);  // Reset jump after cooldown
         }
     }
 
@@ -121,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
 
-        // Limit velocity
+        // Limit velocity to moveSpeed
         if (flatVel.magnitude > moveSpeed)
         {
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
@@ -132,13 +133,17 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         // Reset vertical velocity before jumping
-        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z); // Zero out the y velocity
 
+        // Apply jump force
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+
+        Debug.Log("Jump applied with force: " + jumpForce);  // Debugging jump force application
     }
 
     private void ResetJump()
     {
         readyToJump = true;
+        Debug.Log("Ready to jump again!");  // Debugging reset jump
     }
 }

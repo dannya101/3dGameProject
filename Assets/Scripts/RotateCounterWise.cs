@@ -10,7 +10,7 @@ public class RotatingCountWise : MonoBehaviour
 
     private float speed = 30f; 
     private float acceleration = 5f; 
-    private float maxSpeed = 80f; 
+    private float maxSpeed = 50f; 
 
     private float timer = 0f;
     private bool rotateClockwise = true;
