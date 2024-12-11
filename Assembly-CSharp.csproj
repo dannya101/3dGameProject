@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Coin.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCamera.cs" />
+    <Compile Include="Assets\Scripts\MovingBackNForth.cs" />
     <Compile Include="Assets\Character\movementScript.cs" />
     <Compile Include="Assets\Scripts\SpinCoin.cs" />
     <Compile Include="Assets\Scripts\UI.cs" />
