@@ -1,52 +1,61 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
-public class RotatingCise: MonoBehaviour
+
+public class RotatingCountWise : MonoBehaviour
 {
     public GameObject objectToRotate;
-    Quaternion targetRotation;
-    private  int speed = 30;
-    float timer = 0f;
-    float tolerance = 0.01f; // Define a small tolerance
     private Rigidbody rb;
 
-    void Start(){
+    private float speed = 30f; 
+    private float acceleration = 5f; 
+    private float maxSpeed = 80f; 
+
+    private float timer = 0f;
+    private bool rotateClockwise = true;
+
+    void Start()
+    {
         rb = GetComponent<Rigidbody>();
         if (rb == null)
         {
             Debug.LogError("Rigidbody is missing on the object to rotate!");
         }
     }
-    void Update()
+
+    void FixedUpdate()
     {
-        timer += Time.deltaTime;
+        timer += Time.fixedDeltaTime;
 
         if (timer >= 5f) // Every 5 seconds
         {
             timer = 0f; // Reset timer
-            speed = 30;
+            rotateClockwise = !rotateClockwise; // Toggle rotation direction
+            speed = 30f; // Reset speed to initial value
         }
         else
         {
-            speed = -30;
+            // Increase speed linearly, but cap it at maxSpeed
+            speed = Mathf.Min(speed + acceleration * Time.fixedDeltaTime, maxSpeed);
         }
-        Debug.Log("Speed: " + speed);
-    }
-    void FixedUpdate()
-    {
+
+        // Determine the rotation direction
+        float rotationSpeed = rotateClockwise ? speed : -speed;
+
         if (rb != null)
         {
             // Calculate the new rotation
             Quaternion targetRotation = Quaternion.Euler(
                 objectToRotate.transform.eulerAngles.x,
-                objectToRotate.transform.eulerAngles.y - speed * Time.fixedDeltaTime,
+                objectToRotate.transform.eulerAngles.y + rotationSpeed * Time.fixedDeltaTime,
                 objectToRotate.transform.eulerAngles.z
             );
 
             // Apply rotation using Rigidbody
             rb.MoveRotation(targetRotation);
         }
+
+        Debug.Log("Speed: " + speed);
     }
 }
