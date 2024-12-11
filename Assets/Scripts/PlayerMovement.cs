@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public float jumpCooldown;
     public float airMultiplier;
-    bool readyToJump; 
+    bool readyToJump;
 
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
@@ -32,14 +32,15 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
 
     [Header("Audio")]
-    private AudioSource walkAudio;
+    public AudioSource walkAudio; // Reference to the Audio Source component
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
-         if (walkAudio == null)
+        // Ensure the AudioSource is assigned
+        if (walkAudio == null)
         {
             walkAudio = GetComponent<AudioSource>();
         }
@@ -47,16 +48,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        //Check for the ground
+        // Check if the player is on the ground
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
         MyInput();
         SpeedControl();
 
-        //To handle the ground drag
-        if(grounded){
+        // Handle ground drag
+        if (grounded)
+        {
             rb.linearDamping = groundDrag;
 
+            // Play walking audio if moving
             if (horizontalInput != 0 || verticalInput != 0)
             {
                 if (!walkAudio.isPlaying)
@@ -64,18 +67,18 @@ public class PlayerMovement : MonoBehaviour
                     walkAudio.Play(); // Start playing the walking sound
                 }
             }
-        
             else
             {
                 walkAudio.Stop(); // Stop walking sound when player stops
             }
-    }
+        }
         else
         {
             rb.linearDamping = 0;
 
-             walkAudio.Stop();
-    }
+            // Stop the walking sound if not on the ground
+            walkAudio.Stop();
+        }
     }
 
     private void FixedUpdate()
@@ -88,8 +91,8 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        //When to jump
-        if(Input.GetKey(jumpKey) && readyToJump && grounded)
+        // Jump logic
+        if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
 
@@ -103,18 +106,23 @@ public class PlayerMovement : MonoBehaviour
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        //When on ground
-        if(grounded)
+        // Apply movement forces
+        if (grounded)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-        else if(!grounded)
+        }
+        else if (!grounded)
+        {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+        }
     }
 
     private void SpeedControl()
     {
         Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
 
-        if(flatVel.magnitude > moveSpeed)
+        // Limit velocity
+        if (flatVel.magnitude > moveSpeed)
         {
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
             rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
@@ -123,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        //Reset the y velocity
+        // Reset vertical velocity before jumping
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);

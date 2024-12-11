@@ -76,6 +76,7 @@
     <Compile Include="Assets/Scripts/PlayerMovement.cs" />
     <Compile Include="Assets/Character/playerCamera.cs" />
     <Compile Include="Assets/Scripts/Coin.cs" />
+    <Compile Include="Assets/Scripts/HitSound.cs" />
     <Compile Include="Assets/Scripts/UI.cs" />
     <Compile Include="Assets/Scripts/RotateCounterWise.cs" />
   </ItemGroup>
