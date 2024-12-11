@@ -1,44 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
-public class RotatingClockWise: MonoBehaviour
+
+public class RotatingClockWise : MonoBehaviour
 {
     public GameObject objectToRotate;
-    Quaternion targetRotation;
-    private  int speed = 50;
-    float timer = 0f;
-    float tolerance = 0.01f; // Define a small tolerance
+    private Quaternion targetRotation;
+    private float speed = 10f; // Initial speed
+    private float timer = 0f;
+    private float tolerance = 0.01f; // Define a small tolerance
     public Rigidbody rb;
-    bool rotateClockwise = true;
+    private bool rotateClockwise = true;
+    private float acceleration = 5f; // How much the speed increases per second
 
-    void Start(){
+    void Start()
+    {
         rb = GetComponent<Rigidbody>();
         if (rb == null)
         {
             Debug.LogError("Rigidbody is missing on the object to rotate!");
         }
     }
-    // void Update()
-    // {
-    //     timer += Time.deltaTime;
 
-    //     if (timer >= 5f) // Every 5 seconds
-    //     {
-    //         timer = 0f; // Reset timer
-    //         speed = 30;
-    //     }
-    //     else
-    //     {
-    //         speed = -30;
-    //     }
-    //     Debug.Log("Speed: " + speed);
-    // }
     void FixedUpdate()
     {
-        timer += Time.time;
+        timer += Time.fixedDeltaTime;
 
         if (timer >= 5f) // Every 5 seconds
         {
@@ -46,15 +33,20 @@ public class RotatingClockWise: MonoBehaviour
             rotateClockwise = !rotateClockwise; // Toggle rotation direction
         }
 
-        // Determine the speed based on direction
+        // Increase the speed linearly
+        speed += acceleration * Time.fixedDeltaTime;
+
+        // Determine the rotation direction
         float rotationSpeed = rotateClockwise ? speed : -speed;
-        Debug.Log("Speed: " + speed);
+
+        Debug.Log("Speed: " + rotationSpeed);
+
         if (rb != null)
         {
             // Calculate the new rotation
             Quaternion targetRotation = Quaternion.Euler(
                 objectToRotate.transform.eulerAngles.x,
-                objectToRotate.transform.eulerAngles.y - speed * Time.fixedDeltaTime,
+                objectToRotate.transform.eulerAngles.y - rotationSpeed * Time.fixedDeltaTime,
                 objectToRotate.transform.eulerAngles.z
             );
 
