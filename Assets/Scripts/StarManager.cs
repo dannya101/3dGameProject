@@ -2,39 +2,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class StarManager : MonoBehaviour
 {
     public GameObject starPrefab;  // Reference to the star prefab
-    public int maxStars = 1;       // Number of stars to maintain
     public Vector3 spawnArea = new Vector3(8, 0, 8);  // Define the area for spawning stars
+    private bool isSpawning = false;  // To track if a spawn delay is active
 
     private void Start()
     {
-        for (int i = 0; i < maxStars; i++)
-        {
-            SpawnStar();
-        }
+        StartCoroutine(SpawnStarWithDelay());
     }
 
     private void Update()
     {
-        // Check if the number of stars is below the max and respawn if necessary
-        if (GameObject.FindGameObjectsWithTag("Star").Length < maxStars)
+        // Check if no stars are present and not already waiting to spawn
+        if (GameObject.FindGameObjectsWithTag("Star").Length == 0 && !isSpawning)
         {
-            SpawnStar();
+            StartCoroutine(SpawnStarWithDelay());
         }
+    }
+
+    private IEnumerator SpawnStarWithDelay()
+    {
+        isSpawning = true;
+        
+        // Wait for 30-60 seconds before spawning a new star
+        yield return new WaitForSeconds(Random.Range(30f, 60f));
+        
+        SpawnStar();
+        isSpawning = false;
     }
 
     private void SpawnStar()
     {
-        // Generate a random position within the defined spawn area
-        Vector3 randomPosition = new Vector3(
-            Random.Range(-spawnArea.x, spawnArea.x),
-            1f,
-            Random.Range(-spawnArea.z, spawnArea.z)
-        );
-
-        // Instantiate the coin prefab at the random position
+        Vector3 randomPosition;
+        
+        // Keep generating positions until one does not violate the exclusion rule
+        do
+        {
+            randomPosition = new Vector3(
+                Random.Range(-spawnArea.x, spawnArea.x),
+                1f,
+                Random.Range(-spawnArea.z, spawnArea.z)
+            );
+        } while (randomPosition.x > -1f && randomPosition.x < 1f);
+        
+        // Instantiate the star prefab at the random position
         Instantiate(starPrefab, randomPosition, starPrefab.transform.rotation);
     }
 }
